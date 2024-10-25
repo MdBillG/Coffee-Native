@@ -8,11 +8,13 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  ActivityIndicator,
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   Text,
+  TouchableOpacity,
   useColorScheme,
   View,
 } from 'react-native';
@@ -80,17 +82,70 @@ function App(): React.JSX.Element {
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
+          <Section title="See Your Changes"></Section>
+          <Section title="Debug"></Section>
+          <Section title="Learn Me">
             Read the docs to discover what to do next:
           </Section>
-          <LearnMoreLinks />
         </View>
+        <TouchableOpacity>
+          <Text>Hello</Text>
+        </TouchableOpacity>
+        <ActivityIndicator>cv</ActivityIndicator>
+        <View
+          style={{
+            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+          }}>
+          <Section title="Step One">
+            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
+            screen and then come back to see your edits.
+          </Section>
+          <Section title="See Your Changes"></Section>
+          <Section title="Debug"></Section>
+          <Section title="Learn Me">
+            Read the docs to discover what to do next:
+          </Section>
+        </View>
+        <TouchableOpacity>
+          <Text>Hello</Text>
+        </TouchableOpacity>
+        <ActivityIndicator>cv</ActivityIndicator>{' '}
+        <View
+          style={{
+            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+          }}>
+          <Section title="Step One">
+            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
+            screen and then come back to see your edits.
+          </Section>
+          <Section title="See Your Changes"></Section>
+          <Section title="Debug"></Section>
+          <Section title="Learn Me">
+            Read the docs to discover what to do next:
+          </Section>
+        </View>
+        <TouchableOpacity>
+          <Text>Hello</Text>
+        </TouchableOpacity>
+        <ActivityIndicator>cv</ActivityIndicator>{' '}
+        <View
+          style={{
+            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+          }}>
+          <Section title="Step One">
+            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
+            screen and then come back to see your edits.
+          </Section>
+          <Section title="See Your Changes"></Section>
+          <Section title="Debug"></Section>
+          <Section title="Learn Me">
+            Read the docs to discover what to do next:
+          </Section>
+        </View>
+        <TouchableOpacity>
+          <Text>Hello</Text>
+        </TouchableOpacity>
+        <ActivityIndicator>cv</ActivityIndicator>
       </ScrollView>
     </SafeAreaView>
   );
