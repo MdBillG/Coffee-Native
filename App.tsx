@@ -12,24 +12,28 @@ import {
   StyleSheet,
 } from 'react-native';
 import Login from './src/Login/Login';
+import HomeScreen from './src/Home/Home';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 function App() {
-  const showAlert = () => {
-    Alert.alert('Alert Title', 'This is the message', [
-      {
-        text: 'Cancel',
-        onPress: () => console.log('Cancel Pressed'),
-      },
-      // {
-      //   text: 'OK',
-      //   onPress: () => console.log('OK Pressed'),
-      // },
-    ]);
-  };
   return (
-    <SafeAreaView className="flex-1 p-10">
-      <Login />
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{headerShown: false}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 export default App;
